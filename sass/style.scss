@@ -1,0 +1,400 @@
+/*!
+Theme Name: Plus Learning
+Theme URI: https://pluslearningtuition.com
+Author: Ciaran Grimshaw
+Author URI: http://underscores.me/
+Description: Theme for Plus Learning Tuition
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: pluslearning
+Tags:
+*/
+
+//light orange f8c33b
+//dark orange e93f33
+//#2f4858
+//#33658a
+//#86bbd8
+//#f6ae2d
+//:root {
+//  --primary: #f26419;
+//  --secondary: #33658a;
+//}
+$primary: #f26419;
+$primary-light: #f3a543;
+
+//old - green
+$secondary: #82d173;
+$secondary-light: #abfaa9;
+$secondary-dark: #598449;
+
+//red
+$secondary: #D00000;
+$secondary-light: #f3353d;
+$secondary-dark: #a50004;
+
+
+//blue
+$secondary: #3a85d0;
+$secondary-light: #72a8d0;
+$secondary-dark: #1061d0;
+
+@media (max-width: 766px) {
+  .mobile-hide {
+    display: none;
+  }
+}
+@media (min-width: 767px) {
+  .desktop-hide {
+    display: none;
+  }
+}
+
+//smooth scroll behaviour
+html {
+  scroll-behavior: smooth;
+
+  //disable on prefers-reduced-motion for accessiblity purposes
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
+* {
+  line-height: 140%;
+}
+
+body {
+  color: #222;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background: $primary;
+}
+
+.container-fluid {
+  max-width: 1000px;
+}
+
+.stickybar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: 75px;
+  padding: 5px 0;
+
+  //.nav__logo
+  @at-root #{&}__logo {
+    height: 65px;
+  }
+}
+
+.toggle {
+  float: right;
+  cursor: pointer;
+  line-height: 60px;
+  border: 0;
+  background: none;
+}
+
+.menu-nav {
+  float: right;
+  line-height: 65px;
+
+  //wp-generated menu
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+
+    .menu-item {
+      display: inline-block;
+
+      &:first-child {
+        margin-right: 15px;
+      }
+
+      a {
+        text-decoration: none;
+        background: $primary;
+        padding: 10px;
+        color: #fff;
+        border-radius: 5px;
+        transition: 0.1s ease;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 767px) {
+    height: 100%;
+    width: 100%;
+    max-width: 250px;
+    position: fixed;
+    top: 75px;
+    right: 0;
+    background: $secondary;
+    z-index: 2;
+    padding: 15px;
+
+    transition: 0.4s ease;
+    transform: translateX(250px);
+    box-shadow: none;
+
+    //.menu-nav--toggled
+    @at-root #{&}--toggled {
+      transform: translateX(0);
+      box-shadow: 0 10px 10px rgba(47, 72, 88, 0.5);
+    }
+
+    .sidebar__close {
+      display: block;
+      font-size: 34px;
+      text-align: left;
+      cursor: pointer;
+      margin-bottom: 10px;
+      background: none;
+      border: 0;
+      color: #fff;
+      width: 100%;
+    }
+
+    //wp-generated menu
+    .menu {
+      list-style: none;
+      padding: 0;
+
+      .menu-item {
+        margin: 0 0 15px 0;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        text-align: center;
+        width: 100%;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+          background: none;
+          display: block;
+          padding: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.main-anchor {
+  position: absolute;
+  margin-top: -75px;
+}
+
+.section {
+  padding: 60px 0;
+  position: relative;
+
+  //.section--header
+  @at-root #{&}--header {
+    background: rgba($secondary, 0.6);
+    color: #fff;
+    height: calc(100vh - 75px);
+
+    &:after {
+      content: "";
+      position: absolute;
+
+      background-image: url('media/writing.jpg');
+      background-position: 35% 70%;
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      z-index: -1;
+    }
+
+    //.section--header__title
+    @at-root #{&}__title {
+      font-size: 64px;
+      line-height: 100%;
+      text-shadow: 2px 2px 2px $secondary-dark;
+      text-align: center;
+      margin: 5vh 0 4vh;
+
+      @media (min-width: 767px) {
+        font-size: 9vw;
+        margin: 10vh 0 4vh;
+      }
+    }
+
+    //.section--header__strapline
+    @at-root #{&}__strapline {
+      font-size: 34px;
+      line-height: 100%;
+      text-shadow: 2px 2px 2px $secondary-dark;
+      text-align: center;
+      margin: 4vh 0;
+
+      @media (min-width: 767px) {
+        font-size: 4vw;
+      }
+    }
+
+    //.section--header__icon
+    @at-root #{&}__icon {
+      font-size: 60px;
+      position: absolute;
+      bottom: 10vh;
+      left: calc(50% - 30px);
+    }
+  }
+
+  //.section--header--sub
+  @at-root #{&}--header--sub {
+    height: auto;
+    padding: 90px 0;
+
+    //.section--header--sub__title
+    @at-root #{&}__title {
+      font-size: 56px;
+      line-height: 100%;
+      text-shadow: 2px 2px 2px $secondary-dark;
+      text-align: left;
+      margin: 0;
+    }
+  }
+
+  //.section--quotes
+  @at-root #{&}--quotes {
+    //padding-top: 0;
+  }
+
+  //.section--footer
+  @at-root #{&}--footer {
+    text-align: center;
+    background: $secondary-dark;
+    color: #fff;
+
+    //.section--footer__hr
+    @at-root #{&}__hr {
+      background: #fff;
+      margin: 50px 0;
+    }
+  }
+}
+
+.headshot-img {
+  border-radius: 50%;
+  border: 5px solid $primary-light;
+  margin: 0 auto 45px;
+  display: block;
+}
+
+.googlemaps-embed {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #f2f1f0;
+  border-radius: 10px;
+}
+
+
+
+//links
+.link {
+  color: var(--secondary);
+  text-decoration: underline;
+  transition: 0.15s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+  &:hover,
+  &:visited {
+    color: inherit;
+  }
+
+  //.link--white
+  @at-root #{&}--white {
+    color: #fff;
+  }
+
+  //.link--no-decoration
+  @at-root #{&}--no-decoration {
+    text-decoration: none;
+  }
+}
+
+
+//cms content - contains generic tag styles
+.wp-output {
+  margin-bottom: 45px;
+}
+
+
+//reviews
+.blockquote {
+  color: $primary;
+  margin: 40px 0;
+  position: relative;
+
+  //quote mark
+  &:before,
+  &:after {
+    position: absolute;
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 200px;
+    opacity: 0.15;
+  }
+  &:before {
+    content: "“";
+    left: 0;
+    top: 50px;
+  }
+  &:after {
+    content: "”";
+    right: 0;
+    bottom: -50px;
+  }
+
+  //.blockquote__source - the name and where the review came from
+  @at-root #{&}__source {
+    font-style: italic;
+    font-weight: 700;
+    text-align: right;
+    display: inline-block;
+    float: right;
+  }
+
+  @at-root #{&}--secondary {
+    color: $secondary-dark;
+  }
+}
+
+.seal-logo {
+  margin-top: 20px;
+}

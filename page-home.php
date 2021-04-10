@@ -8,72 +8,50 @@ get_header();
 <div class="section section--body">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3" data-aos="fade-right">
+            <div class="col-md-4" data-aos="fade-right">
                 <img class="headshot-img" src="<?php echo get_stylesheet_directory_uri() ?>/media/francesca-headshot.png" alt="Francesca Grimshaw headshot">
             </div>
 
-            <div class="col-md-9" data-aos="fade-left">
+            <div class="col-md-8" data-aos="fade-left">
                 <div class="wp-output">
-                    <?php //echo apply_filters( 'the_content', get_post( get_option( 'page_on_front' ) )->post_content ); ?>
-                    <!-- wp:heading -->
                     <h2>About Me</h2>
-                    <!-- /wp:heading -->
-
-                    <!-- wp:paragraph -->
-                    <p>My name is Francesca Grimshaw, and I am a private tutor specialising in preparation for 11+ school entrance exams, such as Bacup and Rawtenstall Grammar School (BRGS) which has now adopted a CEM-style entrance exam. My eldest son and daughter were both educated at BRGS and I also currently have sons in Years 10 and 8 at BRGS.</p>
-                    <!-- /wp:paragraph -->
+                    <p>My name is Francesca Grimshaw, and I am a private tutor specialising in preparation for 11+ school entrance exams, such as Bacup and Rawtenstall Grammar School (BRGS) which has now adopted a CEM-style entrance exam. My eldest son and daughter were both educated at BRGS and I also currently have sons in Years 11 and 9 at BRGS.</p>
                 </div>
             </div>
 
-            <div class="col-md-3 desktop-hide" data-aos="fade-right">
+            <div class="col-md-4 desktop-hide" data-aos="fade-right">
                 <img class="headshot-img" src="<?php echo get_stylesheet_directory_uri() ?>/media/office1.jpg" alt="Tutoring office">
             </div>
-            <div class="col-md-9" data-aos="fade-right">
+            <div class="col-md-8" data-aos="fade-right">
                 <div class="wp-output">
-                    <!-- wp:heading -->
                     <h2>My Background</h2>
-                    <!-- /wp:heading -->
-
-                    <!-- wp:paragraph -->
-                    <p>I have been a qualified teacher for almost 25 years and a tutor for a number of years, holding a full and current DBS (formerly CRB) certificate. I attended Lancaster University College of St Martin and graduated in 1995 with a 2:1 BA Honours degree in Education and English.</p>
-                    <!-- /wp:paragraph -->
-
-                    <!-- wp:paragraph -->
+                    <p>I have been a qualified teacher for over 25 years and a tutor for a number of years, holding a full and current DBS (formerly CRB) certificate. I attended Lancaster University College of St Martin and graduated in 1995 with a 2:1 BA Honours degree in Education and English.</p>
                     <p>Before my teaching degree, I worked in retail and later in banking. As part of my studies, I taught in many primary schools across Lancashire and went straight from university to a permanent job as a Year 5 class teacher, although I've taught the entire primary age range during my career.</p>
-                    <!-- /wp:paragraph -->
                 </div>
             </div>
-            <div class="col-md-3 mobile-hide" data-aos="fade-left">
+            <div class="col-md-4 mobile-hide" data-aos="fade-left">
                 <img class="headshot-img" src="<?php echo get_stylesheet_directory_uri() ?>/media/office1.jpg" alt="Tutoring office">
             </div>
 
-            <div class="col-md-3" data-aos="fade-right">
+            <div class="col-md-4" data-aos="fade-right">
                 <img class="headshot-img" src="<?php echo get_stylesheet_directory_uri() ?>/media/office2.jpg" alt="Tutoring office">
             </div>
 
-            <div class="col-md-9" data-aos="fade-left">
+            <div class="col-md-8" data-aos="fade-left">
                 <div class="wp-output">
-                    <!-- wp:heading -->
-                    <h2>Why Tutor?</h2>
-                    <!-- /wp:heading -->
-
-                    <!-- wp:paragraph -->
-                    <p>I love teaching and being a tutor. I enjoy motivating children to learn and aim to make learning fun and memorable. It is so rewarding to see children grow in confidence and make progress in areas they'd previously been worried about or were struggling to understand. I am proud of the high pass rates my students achieve; in 2018, 80% of my students who started their studies in autumn achieved above the BRGS exam pass mark, and in 2019 that number rose to 85%.</p>
-                    <!-- /wp:paragraph -->
-
-                    <!-- wp:paragraph -->
-                    <p>Tutoring takes place at my home address in Haslingden.</p>
-                    <!-- /wp:paragraph -->
+                    <h2>Tuition</h2>
+                    <p>I love teaching and being a tutor. I enjoy motivating children to learn and aim to make learning fun and memorable. It is so rewarding when students achieve a pass, but even more rewarding to see them grow in confidence and make progress in areas they'd previously been worried about or were struggling to understand.</p>
                 </div>
+            </div>
+
+            <div class="col-12">
+                <h2>Location</h2>
+                <p>My current tutoring method is a combination of in-person sessions and online Zoom classes. The first lesson each month takes place at my home address in Haslingden, Rossendale. The remaining lessons that month will be held remotely in a private Zoom meeting.</p>
+                <iframe class="googlemaps-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2360.994399390429!2d-2.3322671488094158!3d53.71836215438393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b98795aad705f%3A0x875b598a7621a655!2s20%20Rising%20Bridge%20Rd%2C%20Haslingden%2C%20Rossendale%20BB4%205BL!5e0!3m2!1sen!2suk!4v1572093663696!5m2!1sen!2suk" frameborder="0" allowfullscreen=""></iframe>
             </div>
         </div>
     </div>
 </div>
-
-<div class="container-fluid">
-    <iframe class="googlemaps-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2360.994399390429!2d-2.3322671488094158!3d53.71836215438393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b98795aad705f%3A0x875b598a7621a655!2s20%20Rising%20Bridge%20Rd%2C%20Haslingden%2C%20Rossendale%20BB4%205BL!5e0!3m2!1sen!2suk!4v1572093663696!5m2!1sen!2suk" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
 
 <div class="section section--quotes">
     <div class="container-fluid">
@@ -122,6 +100,5 @@ get_header();
         </div>
     </div>
 </div>
-
 
 <?php get_footer() ?>
